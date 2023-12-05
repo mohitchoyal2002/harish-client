@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+html{
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x:hidden ;
+}
+.buttonscale{
+  transition: transform 0.1s ease-in-out;
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+.checkboxes{
+  font-size: 18px;
+  font-weight: 400;
+}
+.cd{
+  font-weight: 800;
+  font-size: 30px;
+}
+@media only screen and (max-width: 724px) {
+  .gb{
+  vertical-align: middle;}
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }}
+
+@keyframes colorChange {
+  0% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: purple;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust the number of images */
+  }
+}
+.animated-border {
+  border: 3px solid;
+  border-image: linear-gradient(to right, yellow, purple, red);
+  border-image-slice: 1;
+  animation: colorChange 4s linear infinite;
+}
+
+
+.carousel{
+  animation: scroll 10s linear infinite;
+}
